@@ -17,10 +17,12 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    // Force single React instance to prevent "Cannot read properties of null (reading 'useEffect')" error
+    // Force single React instance to prevent hook errors
     dedupe: ["react", "react-dom", "react/jsx-runtime"],
   },
   optimizeDeps: {
-    include: ["@tanstack/react-query"],
+    // Ensure react-query uses the same React instance
+    include: ["@tanstack/react-query", "react", "react-dom"],
+    force: true, // Force re-optimization
   },
 }));
