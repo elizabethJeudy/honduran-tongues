@@ -1,73 +1,155 @@
-# Welcome to your Lovable project
+# 📖 Diccionario Hondureño
 
-## Project info
+> A living digital dictionary preserving the languages and dialects of Honduras — from Caliche street slang to indigenous languages spoken for centuries.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0-38B2AC?logo=tailwind-css)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌎 About
 
-**Use Lovable**
+**Diccionario Hondureño** is an open, community-driven dictionary dedicated to preserving the linguistic heritage of Honduras. It covers:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Language | Description |
+|----------|-------------|
+| 🇭🇳 **Caliche** | Honduran street slang and everyday colloquialisms |
+| 🌊 **Miskito** | Language of the Miskito people of the Caribbean coast |
+| 🥁 **Garífuna** | Afro-indigenous language of the Garífuna people |
+| 🌿 **Pech** | Ancient language of the Pech people of Olancho |
+| 🏔️ **Lenca** | Language of the Lenca, Honduras's largest indigenous group |
+| 🌳 **Tawahka** | Language of the Tawahka people of the Patuca river region |
+| 🦅 **Tolupán** | Language of the Tolupán (Jicaque) people |
 
-Changes made via Lovable will be committed automatically to this repo.
+With **255+ entries** and growing, each word includes:
+- Spanish & English translations
+- Example sentences
+- Pronunciation guides
+- Cultural notes & context
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- 🔍 **Full-text search** — search by word, translation, category, or example
+- 🗂️ **Language filter** — browse by specific language or all at once
+- ➕ **Community contributions** — submit new words to be reviewed and added
+- 📱 **Responsive design** — works beautifully on mobile and desktop
+- ⚡ **Fast & smooth** — animated UI with Framer Motion
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animations**: Framer Motion
+- **Backend**: Supabase (database + RLS security)
+- **Forms**: React Hook Form + Zod validation
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or bun
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/diccionario-hondureno.git
+
+# Navigate into the project
+cd diccionario-hondureno
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📁 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/          # UI components
+│   ├── AddWordForm.tsx  # Community word submission form
+│   ├── DictionaryCard.tsx
+│   ├── DictionaryHeader.tsx
+│   ├── LanguageFilter.tsx
+│   └── SearchBar.tsx
+├── data/                # Dictionary word data
+│   ├── calicheData.ts   # 100+ Caliche entries
+│   ├── indigenousData.ts # 150+ indigenous language entries
+│   └── types.ts
+├── pages/
+│   └── Index.tsx        # Main dictionary page
+└── integrations/
+    └── supabase/        # Database client & types
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contributions are warmly welcome! You can:
 
-## How can I deploy this project?
+1. **Submit a word via the app** — click "Agregar Palabra" on the main page
+2. **Open a Pull Request** — add words directly to the data files
+3. **Report issues** — if you spot an error in a translation or pronunciation
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Adding words via code
 
-## Can I connect a custom domain to my Lovable project?
+Words are typed as `DictionaryEntry` objects:
 
-Yes, you can!
+```typescript
+{
+  id: 'unique-id',
+  word: 'Catracho',
+  language: 'caliche',
+  category: 'Identidad',
+  spanishTranslation: 'Hondureño',
+  englishTranslation: 'Honduran person',
+  example: 'Soy catracho hasta los huesos.',
+  pronunciation: 'ka-TRA-cho',
+  notes: 'Term of pride used by Hondurans to refer to themselves.'
+}
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📜 Languages at Risk
+
+Several languages in this dictionary are considered **endangered**. Projects like this one aim to raise awareness and help document vocabulary before it is lost:
+
+- **Tawahka** — fewer than 1,000 speakers
+- **Tolupán** — critically endangered
+- **Pech** — fewer than 3,000 speakers
+
+If you are a native speaker or have knowledge of these languages, your contributions are especially valuable.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+This project was built out of love for Honduras and its incredible cultural diversity. Special thanks to the communities who keep these languages alive.
+
+> *"Un idioma es un dialecto con ejército y marina."* — Max Weinreich
+>
+> *"A language is a dialect with an army and a navy."*
