@@ -50,7 +50,7 @@ const Index = () => {
   }, [userWords]);
 
   const filteredEntries = useMemo(() => {
-    return dictionaryEntries.filter(entry => {
+    return allEntries.filter(entry => {
       const matchesLanguage = selectedLanguage === 'all' || entry.language === selectedLanguage;
       
       if (!matchesLanguage) return false;
