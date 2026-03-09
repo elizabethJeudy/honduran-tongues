@@ -12,6 +12,42 @@ import { motion } from 'framer-motion';
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('all');
+  const [userWords, setUserWords] = useState<DictionaryEntry[]>([]);
+
+  useEffect(() => {
+    fetchUserWords();
+  }, []);
+
+  const fetchUserWords = async () => {
+    const { data, error } = await supabase
+      .from('dictionary_words')
+      .select('*')
+      .eq('status', 'approved');
+
+    if (error) {
+      console.error('Error fetching user words:', error);
+      return;
+    }
+
+    if (data) {
+      const formattedWords: DictionaryEntry[] = data.map(word => ({
+        id: word.id,
+        word: word.word,
+        language: word.language as DictionaryEntry['language'],
+        category: word.category,
+        spanishTranslation: word.spanish_translation,
+        englishTranslation: word.english_translation,
+        example: word.example || undefined,
+        pronunciation: word.pronunciation || undefined,
+        notes: word.notes || undefined,
+      }));
+      setUserWords(formattedWords);
+    }
+  };
+
+  const allEntries = useMemo(() => {
+    return [...dictionaryEntries, ...userWords];
+  }, [userWords]);
 
   const filteredEntries = useMemo(() => {
     return dictionaryEntries.filter(entry => {
