@@ -64,16 +64,26 @@ export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
       <Card className="hover:shadow-lg transition-shadow border-2">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-2">
-            <CardTitle className="text-2xl font-bold text-primary">
-              {entry.word}
-            </CardTitle>
+            <div className="flex items-center gap-2">
+              <CardTitle className="text-2xl font-bold text-primary">
+                {entry.word}
+              </CardTitle>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8"
+                onClick={playPronunciation}
+                disabled={isPlaying}
+              >
+                <Volume2 className={`w-4 h-4 ${isPlaying ? 'text-primary animate-pulse' : ''}`} />
+              </Button>
+            </div>
             <Badge className={`${languageInfo?.color} text-white`}>
               {languageInfo?.name}
             </Badge>
           </div>
           {entry.pronunciation && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Volume2 className="w-4 h-4" />
               <span className="italic">{entry.pronunciation}</span>
             </div>
           )}
