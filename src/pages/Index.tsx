@@ -76,7 +76,10 @@ const Index = () => {
         
         <div className="space-y-6 mb-8">
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
-          <LanguageFilter selected={selectedLanguage} onSelect={setSelectedLanguage} />
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+            <LanguageFilter selected={selectedLanguage} onSelect={setSelectedLanguage} />
+            <AddWordForm />
+          </div>
         </div>
 
         <motion.div
