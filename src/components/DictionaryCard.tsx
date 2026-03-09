@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { DictionaryEntry, languages } from '@/data/dictionaryData';
 import { MessageSquare, Volume2 } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 interface DictionaryCardProps {
   entry: DictionaryEntry;
@@ -11,6 +14,46 @@ interface DictionaryCardProps {
 
 export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
   const languageInfo = languages.find(l => l.id === entry.language);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playPronunciation = async () => {
+    if (isPlaying) return;
+    
+    setIsPlaying(true);
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/text-to-speech`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
+          body: JSON.stringify({ text: entry.word }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to generate audio');
+      }
+
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      const audio = new Audio(audioUrl);
+      
+      audio.onended = () => {
+        setIsPlaying(false);
+        URL.revokeObjectURL(audioUrl);
+      };
+      
+      await audio.play();
+    } catch (error) {
+      console.error('Error playing pronunciation:', error);
+      toast.error('Failed to play pronunciation');
+      setIsPlaying(false);
+    }
+  };
   
   return (
     <motion.div
