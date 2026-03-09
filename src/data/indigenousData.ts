@@ -31,6 +31,16 @@ export const miskitoEntries: DictionaryEntry[] = [
   { id: 'm28', word: 'Sapa', language: 'miskito', category: 'Objetos', spanishTranslation: 'Piedra', englishTranslation: 'Stone, rock', pronunciation: 'SAH-pah' },
   { id: 'm29', word: 'Kli', language: 'miskito', category: 'Familia', spanishTranslation: 'Hermano/a', englishTranslation: 'Sibling', pronunciation: 'KLEE' },
   { id: 'm30', word: 'Witin', language: 'miskito', category: 'Familia', spanishTranslation: 'Abuelo/a', englishTranslation: 'Grandparent', pronunciation: 'WEE-teen' },
+  { id: 'm31', word: 'Siksa', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Sol', englishTranslation: 'Sun', pronunciation: 'SEEK-sah' },
+  { id: 'm32', word: 'Luhpia', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Flor', englishTranslation: 'Flower', pronunciation: 'LOOH-pee-ah' },
+  { id: 'm33', word: 'Kulkras', language: 'miskito', category: 'Comida', spanishTranslation: 'Carne', englishTranslation: 'Meat', pronunciation: 'KOOL-krahs' },
+  { id: 'm34', word: 'Duri', language: 'miskito', category: 'Objetos', spanishTranslation: 'Canoa', englishTranslation: 'Canoe', pronunciation: 'DOO-ree' },
+  { id: 'm35', word: 'Almuk', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Río', englishTranslation: 'River', pronunciation: 'AHL-mook' },
+  { id: 'm36', word: 'Aiska', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Montaña', englishTranslation: 'Mountain', pronunciation: 'AY-skah' },
+  { id: 'm37', word: 'Pihni', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Camino', englishTranslation: 'Path, road', pronunciation: 'PEEH-nee' },
+  { id: 'm38', word: 'Sakun', language: 'miskito', category: 'Expresiones', spanishTranslation: 'Sí', englishTranslation: 'Yes', pronunciation: 'SAH-koon' },
+  { id: 'm39', word: 'Apia', language: 'miskito', category: 'Expresiones', spanishTranslation: 'No', englishTranslation: 'No', pronunciation: 'AH-pee-ah' },
+  { id: 'm40', word: 'Yawan', language: 'miskito', category: 'Naturaleza', spanishTranslation: 'Jaguar', englishTranslation: 'Jaguar', pronunciation: 'YAH-wahn' },
 ];
 
 export const garifunaEntries: DictionaryEntry[] = [
@@ -64,6 +74,16 @@ export const garifunaEntries: DictionaryEntry[] = [
   { id: 'g28', word: 'Habín', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Tierra', englishTranslation: 'Earth, land', pronunciation: 'hah-BEEN' },
   { id: 'g29', word: 'Marugu', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Canoa', englishTranslation: 'Canoe', pronunciation: 'mah-ROO-goo' },
   { id: 'g30', word: 'Dugu', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Ceremonia ancestral garífuna', englishTranslation: 'Ancestral Garifuna ceremony', pronunciation: 'DOO-goo', notes: 'Important spiritual ritual' },
+  { id: 'g31', word: 'Garaun', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Cielo', englishTranslation: 'Sky', pronunciation: 'gah-RAOWN' },
+  { id: 'g32', word: 'Aban', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Mar', englishTranslation: 'Sea', pronunciation: 'ah-BAHN' },
+  { id: 'g33', word: 'Níchugu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Hermano', englishTranslation: 'Brother', pronunciation: 'NEE-choo-goo' },
+  { id: 'g34', word: 'Níchigu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Hermana', englishTranslation: 'Sister', pronunciation: 'NEE-chee-goo' },
+  { id: 'g35', word: 'Mútu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Hijo', englishTranslation: 'Son', pronunciation: 'MOO-too' },
+  { id: 'g36', word: 'Túmu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Hija', englishTranslation: 'Daughter', pronunciation: 'TOO-moo' },
+  { id: 'g37', word: 'Hiñaru', language: 'garifuna', category: 'Familia', spanishTranslation: 'Abuelo', englishTranslation: 'Grandfather', pronunciation: 'hee-NYAH-roo' },
+  { id: 'g38', word: 'Umá', language: 'garifuna', category: 'Familia', spanishTranslation: 'Abuela', englishTranslation: 'Grandmother', pronunciation: 'oo-MAH' },
+  { id: 'g39', word: 'Wügüri', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Estrella', englishTranslation: 'Star', pronunciation: 'woo-GOO-ree' },
+  { id: 'g40', word: 'Yurúmein', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Desembarco garífuna en Honduras', englishTranslation: 'Garifuna landing in Honduras', pronunciation: 'yoo-ROO-mayn', notes: 'Celebrated April 12' },
 ];
 
 export const pechEntries: DictionaryEntry[] = [
@@ -87,6 +107,11 @@ export const pechEntries: DictionaryEntry[] = [
   { id: 'p18', word: 'Nawa', language: 'pech', category: 'Familia', spanishTranslation: 'Hermana', englishTranslation: 'Sister' },
   { id: 'p19', word: 'Suwa', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Noche', englishTranslation: 'Night' },
   { id: 'p20', word: 'Pétak', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Estrella', englishTranslation: 'Star' },
+  { id: 'p21', word: 'Krus', language: 'pech', category: 'Objetos', spanishTranslation: 'Machete', englishTranslation: 'Machete' },
+  { id: 'p22', word: 'Tarak', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Bosque', englishTranslation: 'Forest' },
+  { id: 'p23', word: 'Pisku', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Pájaro', englishTranslation: 'Bird' },
+  { id: 'p24', word: 'Kusu', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Perro', englishTranslation: 'Dog' },
+  { id: 'p25', word: 'Mistu', language: 'pech', category: 'Naturaleza', spanishTranslation: 'Gato', englishTranslation: 'Cat' },
 ];
 
 export const lencaEntries: DictionaryEntry[] = [
@@ -100,6 +125,11 @@ export const lencaEntries: DictionaryEntry[] = [
   { id: 'l8', word: 'Yarumela', language: 'lenca', category: 'Cultura', spanishTranslation: 'Sitio arqueológico Lenca', englishTranslation: 'Lenca archaeological site', notes: 'Important pre-Columbian Lenca settlement' },
   { id: 'l9', word: 'Sempala', language: 'lenca', category: 'Cultura', spanishTranslation: 'Consejo de ancianos', englishTranslation: 'Council of elders', notes: 'Traditional Lenca governance structure' },
   { id: 'l10', word: 'Tenampa', language: 'lenca', category: 'Naturaleza', spanishTranslation: 'Cerro, elevación', englishTranslation: 'Hill, elevation', notes: 'Common in Lenca place names' },
+  { id: 'l11', word: 'Gracias', language: 'lenca', category: 'Cultura', spanishTranslation: 'Ciudad colonial Lenca', englishTranslation: 'Colonial Lenca city', notes: 'Former capital of Honduras in Lenca territory' },
+  { id: 'l12', word: 'La Campa', language: 'lenca', category: 'Cultura', spanishTranslation: 'Pueblo Lenca famoso por cerámica', englishTranslation: 'Lenca town famous for pottery', notes: 'Known for traditional black pottery' },
+  { id: 'l13', word: 'Intibucá', language: 'lenca', category: 'Naturaleza', spanishTranslation: 'Lugar de niebla y neblina', englishTranslation: 'Place of fog and mist', notes: 'Department name from Lenca' },
+  { id: 'l14', word: 'Yamaranguila', language: 'lenca', category: 'Naturaleza', spanishTranslation: 'Agua que cae', englishTranslation: 'Falling water', notes: 'Lenca place name' },
+  { id: 'l15', word: 'Similatón', language: 'lenca', category: 'Cultura', spanishTranslation: 'Río sagrado', englishTranslation: 'Sacred river', notes: 'Lenca place name element' },
 ];
 
 export const tawahkaEntries: DictionaryEntry[] = [
@@ -118,6 +148,11 @@ export const tawahkaEntries: DictionaryEntry[] = [
   { id: 't13', word: 'Limi', language: 'tawahka', category: 'Naturaleza', spanishTranslation: 'Cielo', englishTranslation: 'Sky' },
   { id: 't14', word: 'Dusa', language: 'tawahka', category: 'Familia', spanishTranslation: 'Hijo', englishTranslation: 'Son' },
   { id: 't15', word: 'Dusni', language: 'tawahka', category: 'Familia', spanishTranslation: 'Hija', englishTranslation: 'Daughter' },
+  { id: 't16', word: 'Awala', language: 'tawahka', category: 'Naturaleza', spanishTranslation: 'Sol', englishTranslation: 'Sun' },
+  { id: 't17', word: 'Kati', language: 'tawahka', category: 'Naturaleza', spanishTranslation: 'Luna', englishTranslation: 'Moon' },
+  { id: 't18', word: 'Krin', language: 'tawahka', category: 'Naturaleza', spanishTranslation: 'Lluvia', englishTranslation: 'Rain' },
+  { id: 't19', word: 'Inska', language: 'tawahka', category: 'Comida', spanishTranslation: 'Pescado', englishTranslation: 'Fish' },
+  { id: 't20', word: 'Almuk', language: 'tawahka', category: 'Naturaleza', spanishTranslation: 'Río', englishTranslation: 'River' },
 ];
 
 export const tolupanEntries: DictionaryEntry[] = [
@@ -133,4 +168,7 @@ export const tolupanEntries: DictionaryEntry[] = [
   { id: 'to10', word: 'Tai', language: 'tolupan', category: 'Familia', spanishTranslation: 'Padre', englishTranslation: 'Father' },
   { id: 'to11', word: 'Yoro', language: 'tolupan', category: 'Naturaleza', spanishTranslation: 'Lugar de Tolupanes', englishTranslation: 'Place of Tolupanes', notes: 'Department name meaning "Place of Tolupanes"' },
   { id: 'to12', word: 'Sumak', language: 'tolupan', category: 'Naturaleza', spanishTranslation: 'Sol', englishTranslation: 'Sun' },
+  { id: 'to13', word: 'Ulum', language: 'tolupan', category: 'Naturaleza', spanishTranslation: 'Luna', englishTranslation: 'Moon' },
+  { id: 'to14', word: 'Tara', language: 'tolupan', category: 'Familia', spanishTranslation: 'Hermano', englishTranslation: 'Brother' },
+  { id: 'to15', word: 'Nara', language: 'tolupan', category: 'Familia', spanishTranslation: 'Hermana', englishTranslation: 'Sister' },
 ];
