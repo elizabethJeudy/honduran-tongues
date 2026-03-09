@@ -1,9 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { DictionaryHeader } from '@/components/DictionaryHeader';
 import { SearchBar } from '@/components/SearchBar';
 import { LanguageFilter } from '@/components/LanguageFilter';
 import { DictionaryCard } from '@/components/DictionaryCard';
+import { AddWordForm } from '@/components/AddWordForm';
 import { dictionaryEntries } from '@/data/dictionaryData';
+import { DictionaryEntry } from '@/data/types';
+import { supabase } from '@/integrations/supabase/client';
 import { motion } from 'framer-motion';
 
 const Index = () => {
