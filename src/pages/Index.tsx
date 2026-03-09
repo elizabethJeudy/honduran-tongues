@@ -67,7 +67,7 @@ const Index = () => {
         (entry.notes && entry.notes.toLowerCase().includes(query))
       );
     });
-  }, [searchQuery, selectedLanguage]);
+  }, [searchQuery, selectedLanguage, allEntries]);
 
   return (
     <div className="min-h-screen bg-background">
