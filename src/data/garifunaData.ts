@@ -162,4 +162,90 @@ export const garifunaEntries: DictionaryEntry[] = [
   { id: 'g130', word: 'Ágüra', language: 'garifuna', category: 'Personas', spanishTranslation: 'Mano', englishTranslation: 'Hand', pronunciation: 'AH-goo-rah' },
   { id: 'g131', word: 'Díri', language: 'garifuna', category: 'Personas', spanishTranslation: 'Corazón', englishTranslation: 'Heart', pronunciation: 'DEE-ree' },
   { id: 'g132', word: 'Wúri', language: 'garifuna', category: 'Personas', spanishTranslation: 'Pie', englishTranslation: 'Foot', pronunciation: 'WOO-ree' },
+  { id: 'g133', word: 'Dügü', language: 'garifuna', category: 'Personas', spanishTranslation: 'Oreja', englishTranslation: 'Ear', pronunciation: 'DOO-goo' },
+  { id: 'g134', word: 'Nigúri', language: 'garifuna', category: 'Personas', spanishTranslation: 'Nariz', englishTranslation: 'Nose', pronunciation: 'nee-GOO-ree' },
+  { id: 'g135', word: 'Ábura', language: 'garifuna', category: 'Personas', spanishTranslation: 'Brazo', englishTranslation: 'Arm', pronunciation: 'AH-boo-rah' },
+  { id: 'g136', word: 'Wébe', language: 'garifuna', category: 'Personas', spanishTranslation: 'Pecho', englishTranslation: 'Chest', pronunciation: 'WEH-beh' },
+  { id: 'g137', word: 'Lúgu', language: 'garifuna', category: 'Personas', spanishTranslation: 'Estómago', englishTranslation: 'Stomach', pronunciation: 'LOO-goo' },
+  { id: 'g138', word: 'Gurúba', language: 'garifuna', category: 'Personas', spanishTranslation: 'Espalda', englishTranslation: 'Back', pronunciation: 'goo-ROO-bah' },
+
+  // Colores
+  { id: 'g139', word: 'Fúnadi', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Blanco', englishTranslation: 'White', pronunciation: 'FOO-nah-dee' },
+  { id: 'g140', word: 'Wísali', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Negro', englishTranslation: 'Black', pronunciation: 'WEE-sah-lee' },
+  { id: 'g141', word: 'Chúbali', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Rojo', englishTranslation: 'Red', pronunciation: 'CHOO-bah-lee' },
+  { id: 'g142', word: 'Gáma', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Amarillo', englishTranslation: 'Yellow', pronunciation: 'GAH-mah' },
+  { id: 'g143', word: 'Arábali', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Verde', englishTranslation: 'Green', pronunciation: 'ah-RAH-bah-lee' },
+  { id: 'g144', word: 'Séneli', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Azul', englishTranslation: 'Blue', pronunciation: 'SEH-neh-lee' },
+
+  // Más acciones
+  { id: 'g145', word: 'Agúrahani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Hablar', englishTranslation: 'To speak', pronunciation: 'ah-GOO-rah-hah-nee' },
+  { id: 'g146', word: 'Aríhani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Ver, mirar', englishTranslation: 'To see, to look', pronunciation: 'ah-REE-hah-nee' },
+  { id: 'g147', word: 'Achülüni', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Escuchar', englishTranslation: 'To listen', pronunciation: 'ah-choo-LOO-nee' },
+  { id: 'g148', word: 'Áfühani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Lavar', englishTranslation: 'To wash', pronunciation: 'AH-foo-hah-nee' },
+  { id: 'g149', word: 'Agándahani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Jugar', englishTranslation: 'To play', pronunciation: 'ah-GAHN-dah-hah-nee' },
+  { id: 'g150', word: 'Ayárahani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Leer', englishTranslation: 'To read', pronunciation: 'ah-YAH-rah-hah-nee' },
+  { id: 'g151', word: 'Arüfüdahani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Enseñar', englishTranslation: 'To teach', pronunciation: 'ah-roo-foo-dah-HAH-nee' },
+  { id: 'g152', word: 'Eréhani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Aprender', englishTranslation: 'To learn', pronunciation: 'eh-REH-hah-nee' },
+  { id: 'g153', word: 'Arúmahani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Pensar', englishTranslation: 'To think', pronunciation: 'ah-ROO-mah-hah-nee' },
+  { id: 'g154', word: 'Aféyehani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Llorar', englishTranslation: 'To cry', pronunciation: 'ah-FEH-yeh-hah-nee' },
+  { id: 'g155', word: 'Abínihani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Venir', englishTranslation: 'To come', pronunciation: 'ah-BEE-nee-hah-nee' },
+  { id: 'g156', word: 'Achúgühani', language: 'garifuna', category: 'Acciones', spanishTranslation: 'Dar', englishTranslation: 'To give', pronunciation: 'ah-CHOO-goo-hah-nee' },
+
+  // Más familia y relaciones
+  { id: 'g157', word: 'Arígini', language: 'garifuna', category: 'Familia', spanishTranslation: 'Primo/a', englishTranslation: 'Cousin', pronunciation: 'ah-REE-gee-nee' },
+  { id: 'g158', word: 'Iduhéñu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Suegra', englishTranslation: 'Mother-in-law', pronunciation: 'ee-doo-HEH-nyoo' },
+  { id: 'g159', word: 'Arigi', language: 'garifuna', category: 'Familia', spanishTranslation: 'Nieto/a', englishTranslation: 'Grandchild', pronunciation: 'ah-REE-gee' },
+  { id: 'g160', word: 'Iyáwadu', language: 'garifuna', category: 'Familia', spanishTranslation: 'Familia', englishTranslation: 'Family', pronunciation: 'ee-YAH-wah-doo' },
+
+  // Más comida
+  { id: 'g161', word: 'Rondón', language: 'garifuna', category: 'Comida', spanishTranslation: 'Sopa espesa de mariscos y coco', englishTranslation: 'Thick seafood coconut soup', pronunciation: 'rohn-DOHN', notes: 'Plato especial para ocasiones festivas' },
+  { id: 'g162', word: 'Kasáu', language: 'garifuna', category: 'Comida', spanishTranslation: 'Chicha de yuca fermentada', englishTranslation: 'Fermented cassava drink', pronunciation: 'kah-SOW', notes: 'Bebida ancestral para ceremonias' },
+  { id: 'g163', word: 'Sasal', language: 'garifuna', category: 'Comida', spanishTranslation: 'Sal', englishTranslation: 'Salt', pronunciation: 'sah-SAHL' },
+  { id: 'g164', word: 'Suga', language: 'garifuna', category: 'Comida', spanishTranslation: 'Azúcar', englishTranslation: 'Sugar', pronunciation: 'SOO-gah' },
+  { id: 'g165', word: 'Lési', language: 'garifuna', category: 'Comida', spanishTranslation: 'Leche', englishTranslation: 'Milk', pronunciation: 'LEH-see' },
+  { id: 'g166', word: 'Búniga', language: 'garifuna', category: 'Comida', spanishTranslation: 'Huevo', englishTranslation: 'Egg', pronunciation: 'BOO-nee-gah' },
+  { id: 'g167', word: 'Wéwe', language: 'garifuna', category: 'Comida', spanishTranslation: 'Mango', englishTranslation: 'Mango', pronunciation: 'WEH-weh' },
+  { id: 'g168', word: 'Nanási', language: 'garifuna', category: 'Comida', spanishTranslation: 'Piña', englishTranslation: 'Pineapple', pronunciation: 'nah-NAH-see' },
+
+  // Más naturaleza y animales
+  { id: 'g169', word: 'Gurúbu', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Cangrejo', englishTranslation: 'Crab', pronunciation: 'goo-ROO-boo' },
+  { id: 'g170', word: 'Wábaga', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Caballo', englishTranslation: 'Horse', pronunciation: 'WAH-bah-gah' },
+  { id: 'g171', word: 'Gúsu', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Cerdo', englishTranslation: 'Pig', pronunciation: 'GOO-soo' },
+  { id: 'g172', word: 'Hího', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Mariposa', englishTranslation: 'Butterfly', pronunciation: 'HEE-hoh' },
+  { id: 'g173', word: 'Séñeli', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Serpiente', englishTranslation: 'Snake', pronunciation: 'SEH-nyeh-lee' },
+  { id: 'g174', word: 'Gubúda', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Iguana', englishTranslation: 'Iguana', pronunciation: 'goo-BOO-dah' },
+  { id: 'g175', word: 'Wérere', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Lagarto', englishTranslation: 'Lizard', pronunciation: 'WEH-reh-reh' },
+  { id: 'g176', word: 'Háñari', language: 'garifuna', category: 'Naturaleza', spanishTranslation: 'Camarón', englishTranslation: 'Shrimp', pronunciation: 'HAH-nyah-ree' },
+
+  // Más objetos
+  { id: 'g177', word: 'Mésa', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Mesa', englishTranslation: 'Table', pronunciation: 'MEH-sah' },
+  { id: 'g178', word: 'Gúsu', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Olla', englishTranslation: 'Pot', pronunciation: 'GOO-soo' },
+  { id: 'g179', word: 'Budúrugu', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Hamaca', englishTranslation: 'Hammock', pronunciation: 'boo-DOO-roo-goo', notes: 'Elemento esencial en los hogares garífunas' },
+  { id: 'g180', word: 'Rúma', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Ropa', englishTranslation: 'Clothes', pronunciation: 'ROO-mah' },
+  { id: 'g181', word: 'Wanáru', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Espejo', englishTranslation: 'Mirror', pronunciation: 'wah-NAH-roo' },
+  { id: 'g182', word: 'Gúburu', language: 'garifuna', category: 'Objetos', spanishTranslation: 'Escoba', englishTranslation: 'Broom', pronunciation: 'GOO-boo-roo' },
+
+  // Más emociones y estados
+  { id: 'g183', word: 'Gáfuriduni', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Orgulloso', englishTranslation: 'Proud', pronunciation: 'GAH-foo-ree-doo-nee' },
+  { id: 'g184', word: 'Gíribidi', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Valiente', englishTranslation: 'Brave', pronunciation: 'GEE-ree-bee-dee' },
+  { id: 'g185', word: 'Wéreweha', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Emocionado', englishTranslation: 'Excited', pronunciation: 'WEH-reh-weh-hah' },
+  { id: 'g186', word: 'Lánina', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Tranquilo, en paz', englishTranslation: 'Calm, at peace', pronunciation: 'LAH-nee-nah' },
+  { id: 'g187', word: 'Agánbadini', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Agradecido', englishTranslation: 'Grateful', pronunciation: 'ah-GAHN-bah-dee-nee' },
+  { id: 'g188', word: 'Luwúbu', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Celoso', englishTranslation: 'Jealous', pronunciation: 'loo-WOO-boo' },
+  { id: 'g189', word: 'Gáñahani', language: 'garifuna', category: 'Emociones', spanishTranslation: 'Avergonzado', englishTranslation: 'Embarrassed', pronunciation: 'GAH-nyah-hah-nee' },
+
+  // Más cultura
+  { id: 'g190', word: 'Ábaimahani', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Cuento, historia oral', englishTranslation: 'Story, oral tradition', pronunciation: 'AH-bah-ee-mah-hah-nee', notes: 'Tradición de narración oral garífuna' },
+  { id: 'g191', word: 'Úraga', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Canción tradicional', englishTranslation: 'Traditional song', pronunciation: 'OO-rah-gah' },
+  { id: 'g192', word: 'Ámali', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Espíritu ancestral', englishTranslation: 'Ancestral spirit', pronunciation: 'AH-mah-lee', notes: 'Los espíritus de los antepasados en la cosmovisión garífuna' },
+  { id: 'g193', word: 'Arüweraguni', language: 'garifuna', category: 'Cultura', spanishTranslation: 'Celebración, fiesta', englishTranslation: 'Celebration, party', pronunciation: 'ah-roo-weh-rah-GOO-nee' },
+
+  // Más expresiones útiles
+  { id: 'g194', word: 'Máfagoun?', language: 'garifuna', category: 'Expresiones', spanishTranslation: '¿Cómo te llamas?', englishTranslation: "What's your name?", pronunciation: 'MAH-fah-gohn' },
+  { id: 'g195', word: 'Numá...', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Mi nombre es...', englishTranslation: 'My name is...', pronunciation: 'noo-MAH' },
+  { id: 'g196', word: 'Gáda lúbaña?', language: 'garifuna', category: 'Expresiones', spanishTranslation: '¿De dónde eres?', englishTranslation: 'Where are you from?', pronunciation: 'GAH-dah loo-BAH-nyah' },
+  { id: 'g197', word: 'Au lúban lidan...', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Yo soy de...', englishTranslation: 'I am from...', pronunciation: 'AH-oo LOO-bahn LEE-dahn' },
+  { id: 'g198', word: 'Lubáragien', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Mucho gusto', englishTranslation: 'Nice to meet you', pronunciation: 'loo-BAH-rah-gee-ehn' },
+  { id: 'g199', word: 'Háma', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Ahora', englishTranslation: 'Now', pronunciation: 'HAH-mah' },
+  { id: 'g200', word: 'Hébe', language: 'garifuna', category: 'Expresiones', spanishTranslation: 'Antes, ayer', englishTranslation: 'Before, yesterday', pronunciation: 'HEH-beh' },
 ];
