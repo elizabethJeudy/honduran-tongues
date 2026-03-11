@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { DictionaryEntry, languages } from '@/data/dictionaryData';
+import { DictionaryEntry } from '@/data/dictionaryData';
 import { MessageSquare, Volume2 } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
@@ -10,11 +10,12 @@ import { toast } from 'sonner';
 interface DictionaryCardProps {
   entry: DictionaryEntry;
   index: number;
+  uiLanguage: 'es' | 'en';
 }
 
-export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
-  const languageInfo = languages.find(l => l.id === entry.language);
+export const DictionaryCard = ({ entry, index, uiLanguage }: DictionaryCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const isSpanish = uiLanguage === 'es';
 
   const playPronunciation = async () => {
     if (isPlaying) return;
@@ -34,23 +35,16 @@ export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
         }
       );
 
-      if (!response.ok) {
-        throw new Error('Failed to generate audio');
-      }
+      if (!response.ok) throw new Error('Failed to generate audio');
 
       const audioBlob = await response.blob();
       const audioUrl = URL.createObjectURL(audioBlob);
       const audio = new Audio(audioUrl);
-      
-      audio.onended = () => {
-        setIsPlaying(false);
-        URL.revokeObjectURL(audioUrl);
-      };
-      
+      audio.onended = () => { setIsPlaying(false); URL.revokeObjectURL(audioUrl); };
       await audio.play();
     } catch (error) {
       console.error('Error playing pronunciation:', error);
-      toast.error('Failed to play pronunciation');
+      toast.error(isSpanish ? 'Error al reproducir' : 'Failed to play pronunciation');
       setIsPlaying(false);
     }
   };
@@ -78,8 +72,8 @@ export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
                 <Volume2 className={`w-4 h-4 ${isPlaying ? 'text-primary animate-pulse' : ''}`} />
               </Button>
             </div>
-            <Badge className={`${languageInfo?.color} text-white`}>
-              {languageInfo?.name}
+            <Badge className="bg-secondary text-secondary-foreground">
+              Garífuna
             </Badge>
           </div>
           {entry.pronunciation && (
@@ -110,7 +104,7 @@ export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
                 <MessageSquare className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground">
-                    Ejemplo:
+                    {isSpanish ? 'Ejemplo:' : 'Example:'}
                   </p>
                   <p className="text-sm italic text-foreground">
                     "{entry.example}"
@@ -122,7 +116,7 @@ export const DictionaryCard = ({ entry, index }: DictionaryCardProps) => {
           
           {entry.notes && (
             <div className="text-sm text-muted-foreground bg-muted p-2 rounded">
-              <span className="font-semibold">Nota:</span> {entry.notes}
+              <span className="font-semibold">{isSpanish ? 'Nota:' : 'Note:'}</span> {entry.notes}
             </div>
           )}
           
