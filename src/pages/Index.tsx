@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { DictionaryHeader } from '@/components/DictionaryHeader';
 import { SearchBar } from '@/components/SearchBar';
-import { LanguageFilter } from '@/components/LanguageFilter';
 import { DictionaryCard } from '@/components/DictionaryCard';
 import { AddWordForm } from '@/components/AddWordForm';
 import { dictionaryEntries } from '@/data/dictionaryData';
@@ -11,7 +10,7 @@ import { motion } from 'framer-motion';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedLanguage, setSelectedLanguage] = useState('all');
+  const [uiLanguage, setUiLanguage] = useState<'es' | 'en'>('es');
   const [userWords, setUserWords] = useState<DictionaryEntry[]>([]);
 
   useEffect(() => {
@@ -22,7 +21,8 @@ const Index = () => {
     const { data, error } = await supabase
       .from('dictionary_words')
       .select('*')
-      .eq('status', 'approved');
+      .eq('status', 'approved')
+      .eq('language', 'garifuna');
 
     if (error) {
       console.error('Error fetching user words:', error);
@@ -33,7 +33,7 @@ const Index = () => {
       const formattedWords: DictionaryEntry[] = data.map(word => ({
         id: word.id,
         word: word.word,
-        language: word.language as DictionaryEntry['language'],
+        language: 'garifuna' as const,
         category: word.category,
         spanishTranslation: word.spanish_translation,
         englishTranslation: word.english_translation,
@@ -50,35 +50,33 @@ const Index = () => {
   }, [userWords]);
 
   const filteredEntries = useMemo(() => {
-    return allEntries.filter(entry => {
-      const matchesLanguage = selectedLanguage === 'all' || entry.language === selectedLanguage;
-      
-      if (!matchesLanguage) return false;
-      
-      if (!searchQuery) return true;
-      
-      const query = searchQuery.toLowerCase();
-      return (
-        entry.word.toLowerCase().includes(query) ||
-        entry.spanishTranslation.toLowerCase().includes(query) ||
-        entry.englishTranslation.toLowerCase().includes(query) ||
-        entry.category.toLowerCase().includes(query) ||
-        (entry.example && entry.example.toLowerCase().includes(query)) ||
-        (entry.notes && entry.notes.toLowerCase().includes(query))
-      );
-    });
-  }, [searchQuery, selectedLanguage, allEntries]);
+    if (!searchQuery) return allEntries;
+    
+    const query = searchQuery.toLowerCase();
+    return allEntries.filter(entry =>
+      entry.word.toLowerCase().includes(query) ||
+      entry.spanishTranslation.toLowerCase().includes(query) ||
+      entry.englishTranslation.toLowerCase().includes(query) ||
+      entry.category.toLowerCase().includes(query) ||
+      (entry.example && entry.example.toLowerCase().includes(query)) ||
+      (entry.notes && entry.notes.toLowerCase().includes(query))
+    );
+  }, [searchQuery, allEntries]);
+
+  const isSpanish = uiLanguage === 'es';
 
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 md:py-12">
-        <DictionaryHeader />
+        <DictionaryHeader
+          uiLanguage={uiLanguage}
+          onToggleLanguage={() => setUiLanguage(prev => prev === 'es' ? 'en' : 'es')}
+        />
         
         <div className="space-y-6 mb-8">
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-            <LanguageFilter selected={selectedLanguage} onSelect={setSelectedLanguage} />
-            <AddWordForm />
+          <div className="flex justify-end">
+            <AddWordForm uiLanguage={uiLanguage} />
           </div>
         </div>
 
@@ -88,12 +86,14 @@ const Index = () => {
           transition={{ delay: 0.3 }}
           className="mb-4 text-center text-muted-foreground"
         >
-          {filteredEntries.length} {filteredEntries.length === 1 ? 'palabra encontrada' : 'palabras encontradas'}
+          {filteredEntries.length} {isSpanish
+            ? (filteredEntries.length === 1 ? 'palabra encontrada' : 'palabras encontradas')
+            : (filteredEntries.length === 1 ? 'word found' : 'words found')}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredEntries.map((entry, index) => (
-            <DictionaryCard key={entry.id} entry={entry} index={index} />
+            <DictionaryCard key={entry.id} entry={entry} index={index} uiLanguage={uiLanguage} />
           ))}
         </div>
 
@@ -104,7 +104,9 @@ const Index = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-muted-foreground">
-              No se encontraron palabras. Intenta otra búsqueda.
+              {isSpanish
+                ? 'No se encontraron palabras. Intenta otra búsqueda.'
+                : 'No words found. Try another search.'}
             </p>
           </motion.div>
         )}

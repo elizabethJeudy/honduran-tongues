@@ -1,7 +1,7 @@
 export type DictionaryEntry = {
   id: string;
   word: string;
-  language: 'caliche' | 'lenca' | 'miskito' | 'garifuna' | 'pech' | 'tawahka' | 'tolupan';
+  language: 'garifuna';
   category: string;
   spanishTranslation: string;
   englishTranslation: string;
